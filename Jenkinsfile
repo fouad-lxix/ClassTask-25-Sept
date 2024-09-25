@@ -27,9 +27,9 @@ pipeline {
                 '''
             } else {
                 bat '''
-                    C:/Users/Fouad/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python.exe -m venv venv
+                    python -m venv venv
                     venv/Scripts/activate
-                    C:/Users/Fouad/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python.exe -m pip install --upgrade pip
+                    python -m pip install --upgrade pip
                     venv/Scripts/pip install pytest
                 '''
             }
