@@ -27,10 +27,10 @@ pipeline {
                 '''
             } else {
                 bat '''
-                    C:\Users\Fouad\AppData\Local\Microsoft\WindowsApps\python.exe -m venv venv
-                    venv\\Scripts\\activate
-                    C:\Users\Fouad\AppData\Local\Microsoft\WindowsApps\python.exe -m pip install --upgrade pip
-                    venv\\Scripts\\pip install pytest
+                    C:/Users/Fouad/AppData/Local/Microsoft/WindowsApps/python.exe -m venv venv
+                    venv/Scripts/activate
+                    C:/Users/Fouad/AppData/Local/Microsoft/WindowsApps/python.exe -m pip install --upgrade pip
+                    venv/Scripts/pip install pytest
                 '''
             }
         }
