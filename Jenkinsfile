@@ -27,9 +27,9 @@ pipeline {
                 '''
             } else {
                 bat '''
-                    C:/Users/Fouad/AppData/Local/Microsoft/WindowsApps/python.exe -m venv venv
+                    C:/Users/Fouad/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python.exe -m venv venv
                     venv/Scripts/activate
-                    C:/Users/Fouad/AppData/Local/Microsoft/WindowsApps/python.exe -m pip install --upgrade pip
+                    C:/Users/Fouad/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python.exe -m pip install --upgrade pip
                     venv/Scripts/pip install pytest
                 '''
             }
@@ -47,7 +47,7 @@ pipeline {
                         '''
                     } else {
                         bat '''
-                            call venv\\Scripts\\activate.bat
+                            call venv/Scripts/activate.bat
                             python -m unittest discover
                         '''
                     }
@@ -62,7 +62,7 @@ pipeline {
                 if (isUnix()) {
                     sh 'deactivate || true'
                 } else {
-                    bat 'call venv\\Scripts\\deactivate.bat || exit 0'
+                    bat 'call venv/Scripts/deactivate.bat || exit 0'
                 }
             }
         }
